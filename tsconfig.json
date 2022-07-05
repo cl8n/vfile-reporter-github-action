@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "lib": [
+      "ES2021"
+    ],
+    "module": "Node16",
+    "outDir": "dist",
+    "rootDir": "src",
+    "strict": true,
+    "target": "ES2021"
+  },
+}
