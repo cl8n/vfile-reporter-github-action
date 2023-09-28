@@ -17,8 +17,7 @@ function reportFile(file: VFile): string {
 function reportMessage(message: VFileMessage): string {
   const startLine = message.position?.start.line ?? message.line;
   const startColumn = message.position?.start.column ?? message.column;
-  const endLine = message.position?.end.line;
-  const endColumn = message.position?.end.column;
+  const end = message.position?.end;
 
   const annotationParts: string[] = [];
   if (message.source != null && message.ruleId != null)
@@ -29,10 +28,8 @@ function reportMessage(message: VFileMessage): string {
     annotationParts.push(`line=${startLine}`);
   if (startColumn != null)
     annotationParts.push(`col=${startColumn}`);
-  if (endLine != null)
-    annotationParts.push(`endLine=${endLine}`);
-  if (endColumn != null)
-    annotationParts.push(`endColumn=${endColumn}`);
+  if (end != null)
+    annotationParts.push(`endLine=${end.line}`, `endColumn=${end.column}`);
 
   let annotationBody = message.reason;
   if (message.url != null)
