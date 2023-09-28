@@ -1,29 +1,32 @@
 {
-  "name": "vfile-reporter-github-action",
-  "version": "1.0.0",
-  "author": "clayton <me@clayton.cc>",
-  "bugs": "https://github.com/cl8n/vfile-reporter-github-action/issues",
-  "description": "vfile utility to create a report for GitHub Actions",
-  "keywords": [
-    "vfile",
-    "vfile-reporter",
-    "github",
-    "github-actions"
-  ],
-  "repository": "github:cl8n/vfile-reporter-github-action",
-  "scripts": {
-    "build": "rimraf dist && tsc",
-    "prepublishOnly": "npm run build"
-  },
-  "main": "dist/index.js",
-  "files": [
-    "dist"
-  ],
-  "type": "module",
-  "devDependencies": {
-    "rimraf": "^3.0.2",
-    "typescript": "^4.7.4",
-    "vfile": "^5.3.4",
-    "vfile-message": "^3.1.2"
-  }
+	"name": "vfile-reporter-github-action",
+	"version": "1.0.0",
+	"author": "clayton <me@clayton.cc>",
+	"bugs": "https://github.com/cl8n/vfile-reporter-github-action/issues",
+	"description": "vfile utility to create a report for GitHub Actions",
+	"keywords": [
+		"vfile",
+		"vfile-reporter",
+		"github",
+		"github-actions"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/cl8n/vfile-reporter-github-action.git"
+	},
+	"scripts": {
+		"build": "rimraf dist && tsc",
+		"prepublishOnly": "npm run build"
+	},
+	"main": "dist/index.js",
+	"files": [
+		"dist"
+	],
+	"type": "module",
+	"devDependencies": {
+		"rimraf": "^3.0.2",
+		"typescript": "^4.7.4",
+		"vfile": "^5.3.4",
+		"vfile-message": "^3.1.2"
+	}
 }
