@@ -14,14 +14,19 @@
 		"type": "git",
 		"url": "git+https://github.com/cl8n/vfile-reporter-github-action.git"
 	},
+	"engines": {
+		"node": ">=16"
+	},
+	"exports": "./build/index.js",
+	"files": [
+		"build"
+	],
+	"main": "./build/index.js",
 	"scripts": {
 		"build": "rimraf build && tsc",
 		"prepublishOnly": "npm run build"
 	},
-	"main": "build/index.js",
-	"files": [
-		"build"
-	],
+	"sideEffects": false,
 	"type": "module",
 	"devDependencies": {
 		"rimraf": "^5.0.5",
