@@ -1,6 +1,6 @@
 {
 	"name": "vfile-reporter-github-action",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"author": "clayton <me@clayton.cc>",
 	"bugs": "https://github.com/cl8n/vfile-reporter-github-action/issues",
 	"description": "vfile utility to create a report for GitHub Actions",
