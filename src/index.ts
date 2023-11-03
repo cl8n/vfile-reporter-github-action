@@ -1,14 +1,14 @@
-import type { VFile } from 'vfile';
+import logReporter from '@noomorph/vfile-reporter-position';
+import type { Reporter, ReporterSettings, VFile } from 'vfile';
 import type { VFileMessage } from 'vfile-message';
 
+export const reporter: Reporter<ReporterSettings> = (files, options) => (
+	'::group::Annotations\n' +
+	files.map(reportFile).join('') +
+	'::endgroup::\n' +
+	logReporter(files, options)
+);
 export default reporter;
-export function reporter(files: VFile | VFile[]): string {
-	if (!Array.isArray(files)) {
-		files = [files];
-	}
-
-	return files.map(reportFile).join('');
-}
 
 function reportFile(file: VFile): string {
 	return file.messages.map(reportMessage).join('');

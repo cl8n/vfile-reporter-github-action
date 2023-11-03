@@ -28,6 +28,9 @@
 	},
 	"sideEffects": false,
 	"type": "module",
+	"dependencies": {
+		"@noomorph/vfile-reporter-position": "^0.2.3"
+	},
 	"devDependencies": {
 		"rimraf": "^5.0.5",
 		"typescript": "^5.2.2",
